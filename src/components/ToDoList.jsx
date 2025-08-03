@@ -7,6 +7,8 @@ function ToDoList(){
     function handleInputChange(event) {
         setNewTask(event.target.value);
     }
+
+    function addTask() {}
    
    
     return (
@@ -14,7 +16,8 @@ function ToDoList(){
             <h1>To-Do List</h1>
 
             <div>
-                <input type="text" placeholder='Enter new task..'/>
+                <input type="text" placeholder='Enter new task..' value={newtask} onChange={handleInputChange}/>
+                <button className='add-task-button' onClick={addTask}> Add </button>
             </div>
         </div>
     );
